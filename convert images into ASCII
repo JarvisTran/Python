@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import time
 import os
-
+                            #CONVERT IMAGES TO ASCII
 def changeFontSize(size=0): #Changes the font size to *size* pixels (kind of, but not really. You'll have to try it to chack if it works for your purpose ;) )
     from ctypes import POINTER, WinDLL, Structure, sizeof, byref
     from ctypes.wintypes import BOOL, SHORT, WCHAR, UINT, ULONG, DWORD, HANDLE
@@ -56,13 +56,13 @@ def changeFontSize(size=0): #Changes the font size to *size* pixels (kind of, bu
     changeFontSize()
     os.system("mode 520, 200")
     os.system("color 0b")
-
+                                        #PRINT ASCII 
 while True:
     print("---------------------------")
-    name = input("Enter the first letter of your CRUSH's name: ").upper()
-    if name != "T":
+    name = input("Enter the first letter of your name: ").upper()
+    if name != "":
         print("INCORRECT, Try again!!!!!!! ")
-    elif name == "T":
+    elif name == "":
         print("CORRECT!!!!!!!!!!!!!!!")
         print("AMAZING GOOD JOB!!!!!!")
         print("---------------")
